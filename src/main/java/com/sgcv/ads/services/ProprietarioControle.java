@@ -1,4 +1,4 @@
-package controle;
+package com.sgcv.ads.services;
 
 import java.util.ArrayList;
 import modelos.IPropietarioCRUD;

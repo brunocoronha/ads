@@ -1,4 +1,4 @@
-package persistencia;
+package com.sgcv.ads.persistencia;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -12,9 +12,9 @@ import java.nio.file.Path;
 import java.nio.file.StandardCopyOption;
 import java.util.ArrayList;
 import java.util.List;
-import modelos.IVeiculoCRUD;
-import modelos.Veiculo;
-import controle.RedimensionarImagem;
+import com.sgcv.ads.interfaces.IVeiculoCRUD;
+import com.sgcv.ads.entities.Veiculo;
+import com.sgcv.ads.controle.RedimensionarImagem;
 
 public class VeiculoDAO implements IVeiculoCRUD {
 

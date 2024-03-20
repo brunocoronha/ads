@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package persistencia;
+package com.sgcv.ads.persistencia;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -17,8 +17,8 @@ import java.nio.file.StandardCopyOption;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JOptionPane;
-import modelos.TipoGastos;
-import modelos.ITipoGastosCRUD;
+import com.sgcv.ads.entities.TipoGastos;
+import com.sgcv.ads.interfaces.ITipoGastosCRUD;
 
 
 /**
