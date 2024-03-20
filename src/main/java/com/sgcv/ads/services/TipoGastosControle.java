@@ -2,12 +2,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package controle;
+package com.sgcv.ads.services;
 
 import java.util.ArrayList;
-import modelos.TipoGastos;
-import persistencia.TipoGastosDAO;
-import modelos.ITipoGastosCRUD;
+import com.sgcv.ads.entities.TipoGastos;
+import com.sgcv.ads.persistencia.TipoGastosDAO;
+import com.sgcv.ads.interfaces.ITipoGastosCRUD;
 
 /**
  *

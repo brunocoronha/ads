@@ -1,9 +1,9 @@
 package com.sgcv.ads.services;
 
 import java.util.ArrayList;
-import modelos.IPropietarioCRUD;
-import modelos.Proprietario;
-import persistencia.ProprietarioDAO;
+import com.sgcv.ads.interfaces.IPropietarioCRUD;
+import com.sgcv.ads.entities.Proprietario;
+import com.sgcv.ads.persistencia.ProprietarioDAO;
 
 public class ProprietarioControle implements IPropietarioCRUD {
 

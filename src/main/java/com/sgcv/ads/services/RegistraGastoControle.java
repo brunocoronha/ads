@@ -2,15 +2,15 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package controle;
+package com.sgcv.ads.services;
 
 import java.util.ArrayList;
 
 import com.sgcv.ads.services.ValidaData;
 
-import modelos.RegistraGastos;
-import persistencia.RegistraGastoDAO;
-import modelos.IRegistraGastosCRUD;
+import com.sgcv.ads.entities.RegistraGastos;
+import com.sgcv.ads.persistencia.RegistraGastoDAO;
+import com.sgcv.ads.interfaces.IRegistraGastosCRUD;
 
 /**
  *

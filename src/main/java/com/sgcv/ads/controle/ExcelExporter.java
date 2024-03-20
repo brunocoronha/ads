@@ -1,4 +1,4 @@
-package controle;
+package com.sgcv.ads.controle;
 
 import java.awt.Desktop;
 import java.io.File;

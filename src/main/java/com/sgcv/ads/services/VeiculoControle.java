@@ -2,12 +2,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package controle;
+package com.sgcv.ads.services;
 
 import java.util.ArrayList;
-import modelos.IVeiculoCRUD;
-import modelos.Veiculo;
-import persistencia.VeiculoDAO;
+import com.sgcv.ads.interfaces.IVeiculoCRUD;
+import com.sgcv.ads.entities.Veiculo;
+import com.sgcv.ads.persistencia.VeiculoDAO;
+
+import com.sgcv.ads.controle.RedimensionarImagem;
 
 /**
  *
