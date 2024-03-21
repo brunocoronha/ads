@@ -22,34 +22,7 @@ public class TipoGastosControle implements ITipoGastosCRUD {
 
     @Override
     public void incluir(TipoGastos objTipoGastos) throws Exception {
-        try {
-            if (objTipoGastos.getId() == -1) {
-                throw new Exception("Preencha o campo ID!!");
-            }
-            // Verifica se ja existe o ID no BD
-            if (consultar(objTipoGastos.getId()) != null) {
-                throw new Exception("ID ja registrado");
-            }
-
-            // Verifica se o campo nome esta vazio.
-            if (objTipoGastos.getNome().isBlank()) {
-                throw new Exception("Preencha o campo Nome do gasto!!");
-            }
-
-            // Verifica se o campo descrição esta vazio
-            if (objTipoGastos.getDescricao().isBlank()) {
-                throw new Exception("Preencha o campo descrição!!");
-            }
-
-            // Valida se foi selecionado uma foto
-            if (objTipoGastos.getIconGasto() == null) {
-                throw new Exception("Selecione uma foto!!");
-            }
-
-            tipoGastosPersistencia.incluir(objTipoGastos);
-        } catch (Exception erro) {
-            throw new Exception(erro.getMessage());
-        }
+       
     }
 
     @Override
@@ -59,38 +32,12 @@ public class TipoGastosControle implements ITipoGastosCRUD {
 
     @Override
     public void alterar(TipoGastos objTipoGastos) throws Exception {
-        try {
-            // Verifica se o campo nome esta vazio.
-            if (objTipoGastos.getNome().isBlank()) {
-                throw new Exception("CAMPO OBRIGATORIO! Preencha o campo Nome do gasto!!");
-            }
-
-            // Verifica se o campo descrição esta vazio
-            if (objTipoGastos.getDescricao().isBlank()) {
-                throw new Exception("CAMPO OBRIGATORIO! Preencha o campo descrição!!");
-            }
-
-            tipoGastosPersistencia.alterar(objTipoGastos);
-        } catch (Exception erro) {
-            String msg = "Metodo alterar TipoGastosControle - " + erro.getMessage();
-            throw new Exception(msg);
-        }
-
+        
     }
 
     @Override
     public TipoGastos consultar(Integer id) throws Exception {
-        try {
-            if (id == null) {
-                throw new Exception("Tipo de Gastos não existe!");
-            }
-            // Verifica se ja existe o ID no BD
-            //if( tipoGastosPersistencia.consultar(id) != null) throw new Exception("ID ja registrado");
-            return tipoGastosPersistencia.consultar(id);
-        } catch (Exception erro) {
-            String msg = "Metodo consultar TipoGastosControle - " + erro.getMessage();
-            throw new Exception(msg);
-        }
+        return null;
     }
 
 //    @Override
