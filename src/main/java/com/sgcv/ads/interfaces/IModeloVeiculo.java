@@ -6,15 +6,15 @@ package com.sgcv.ads.interfaces;
 
 import java.util.ArrayList;
 
-import com.sgcv.ads.entities.ModeloVeiculo;
+import com.sgcv.ads.entities.Veiculo;
 
 /**
  *
  * @author user
  */
 public interface IModeloVeiculo {    
-    public void incluir (ModeloVeiculo modelo) throws Exception;
-    public void alterar(ModeloVeiculo modelo) throws Exception;
-    public ArrayList<ModeloVeiculo> listagemDeModelos() throws Exception;
-    public ModeloVeiculo consultar(Integer id) throws Exception;
+    public void incluir (Veiculo modelo) throws Exception;
+    public void alterar(Veiculo modelo) throws Exception;
+    public ArrayList<Veiculo> listagemDeModelos() throws Exception;
+    public Veiculo consultar(Integer id) throws Exception;
 }

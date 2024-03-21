@@ -1,110 +1,74 @@
 
 package com.sgcv.ads.entities;
 
-import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Entity;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@ToString
+
+@Entity
+@Table(name = "tb_proprietario")
 public class Proprietario {
 
-    // Atributos
-    private String cpf = "";             //CHAVE PARA BUSCA DE PROPRIETÁRIO
-    private String nomeCompleto = "";
-    private String email = "";
-    private Telefone fone = null;    
-    private String categoriaCnh = "";
-    private String numeroCNH = "";
-    private File pathCNH = null;
-    private File patchImagemProprietario = null;
+    private Long id;
+    private String cpf;
+    private String nomeCompleto;
+    private String email;
 
-    // Construtores
-    public Proprietario() {
-        cpf = "";
-        nomeCompleto = "";
-        email = "";
-        fone = null;
-        categoriaCnh = "";
-        numeroCNH = null;
-        pathCNH = null;
-        patchImagemProprietario = null;
-    }
+    @JsonIgnore
+    @OneToMany(mappedBy = "proprietario", cascade = CascadeType.ALL)
+    private List<Veiculo> veiculos = new ArrayList<>(); 
 
-    public Proprietario(String cpf, String nomeCompleto, String email, Telefone fone, String numeroCNH, String categoriaCnh, File pathCNH, File patchImagemProprietario) {
+    @JsonIgnore
+    @OneToMany(mappedBy = "proprietario", cascade = CascadeType.ALL)
+    private List<Telefone> telefones = new ArrayList<>(); 
+
+    public Proprietario(Long id, String cpf, String nomeCompleto, String email) {
+        this.id = id;
         this.cpf = cpf;
         this.nomeCompleto = nomeCompleto;
         this.email = email;
-        this.fone = fone;
-        this.categoriaCnh = categoriaCnh;
-        this.numeroCNH = numeroCNH;
-        this.pathCNH = pathCNH;
-        this.patchImagemProprietario = patchImagemProprietario;
     }
 
     @Override
-    public String toString() {
-        return cpf + ";" + nomeCompleto + ";" + email + ";" + fone.toString() + ";" + numeroCNH +  ";"  + categoriaCnh + ";" + pathCNH.getPath() + ";" + patchImagemProprietario.getPath();
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((id == null) ? 0 : id.hashCode());
+        return result;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Proprietario other = (Proprietario) obj;
+        if (id == null) {
+            if (other.id != null)
+                return false;
+        } else if (!id.equals(other.id))
+            return false;
+        return true;
     }
     
-    // Getters e Setters
-    public String getCpf() {
-        return cpf;
-    }
+        
 
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
-    }
-
-    public String getNomeCompleto() {
-        return nomeCompleto;
-    }
-
-    public void setNomeCompleto(String nomeCompleto) {
-        this.nomeCompleto = nomeCompleto;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public Telefone getFone() {
-        return fone;
-    }
-
-    public void setFone(Telefone fone) {
-        this.fone = fone;
-    }
-
-    public File getPathCNH() {
-        return pathCNH;
-    }
-
-    public void setPathCNH(File pathCNH) {
-        this.pathCNH = pathCNH;
-    }
-
-    public String getCategoriaCnh() {
-        return categoriaCnh;
-    }
-
-    public void setCategoriaCnh(String categoriaCnh) {
-        this.categoriaCnh = categoriaCnh;
-    }
-
-    public String getNumeroCNH() {
-        return numeroCNH;
-    }
-
-    public void setNumeroCNH(String numeroCNH) {
-        this.numeroCNH = numeroCNH;
-    }
-
-    public File getPatchImagemProprietario() {
-        return patchImagemProprietario;
-    }
-
-    public void setPatchImagemProprietario(File patchImagemProprietario) {
-        this.patchImagemProprietario = patchImagemProprietario;
-    }
 }

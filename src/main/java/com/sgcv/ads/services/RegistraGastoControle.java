@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import com.sgcv.ads.services.ValidaData;
 
 import com.sgcv.ads.entities.RegistraGastos;
-import com.sgcv.ads.persistencia.RegistraGastoDAO;
 import com.sgcv.ads.interfaces.IRegistraGastosCRUD;
 
 /**
@@ -22,7 +21,7 @@ public class RegistraGastoControle implements IRegistraGastosCRUD {
     ValidaData validaData = null;
 
     public RegistraGastoControle() {
-        registraGastoPersistencia = new RegistraGastoDAO();
+        registraGastoPersistencia = null;
         validaData = new ValidaData();
     }
 

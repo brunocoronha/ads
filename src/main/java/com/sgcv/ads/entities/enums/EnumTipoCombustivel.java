@@ -1,4 +1,4 @@
-package com.sgcv.ads.entities;
+package com.sgcv.ads.entities.enums;
 
 public class EnumTipoCombustivel {
     

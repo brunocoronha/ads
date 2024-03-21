@@ -6,7 +6,6 @@ package com.sgcv.ads.services;
 
 import java.util.ArrayList;
 import com.sgcv.ads.entities.TipoGastos;
-import com.sgcv.ads.persistencia.TipoGastosDAO;
 import com.sgcv.ads.interfaces.ITipoGastosCRUD;
 
 /**
@@ -18,7 +17,7 @@ public class TipoGastosControle implements ITipoGastosCRUD {
     ITipoGastosCRUD tipoGastosPersistencia = null;
 
     public TipoGastosControle() {
-        tipoGastosPersistencia = new TipoGastosDAO();
+        tipoGastosPersistencia = null;
     }
 
     @Override
